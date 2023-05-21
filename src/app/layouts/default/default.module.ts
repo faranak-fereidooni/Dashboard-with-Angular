@@ -34,4 +34,6 @@ import {MatTableModule} from '@angular/material/table';
     DashboardService
   ]
 })
-export class DefaultModule { }
+export class DefaultModule { 
+  
+}

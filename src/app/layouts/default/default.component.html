@@ -1,3 +1,4 @@
+<div  [ngClass]="isDarkTheme? 'dark-theme' : 'light-theme'">
 <app-header (toggleSideBarForMe)="sideBarToggler()"></app-header>
 
 <mat-drawer-container>
@@ -10,3 +11,4 @@
 </mat-drawer-container>
 
 <app-footer></app-footer>
+</div>

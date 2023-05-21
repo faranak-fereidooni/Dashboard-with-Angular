@@ -6,9 +6,9 @@ import { Component,Output,EventEmitter } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  isDarkTheme = false;
+  isDarkTheme = true;
   @Output() toggleSideBarForMe: EventEmitter<any> = new EventEmitter();
-
+  
 toggleSideBar(){
 this.toggleSideBarForMe.emit();
 setTimeout(()=>{
@@ -16,6 +16,6 @@ setTimeout(()=>{
 }, 300)
 }
 toggleTheme(){
-  this.isDarkTheme=!this.isDarkTheme;
+  this.isDarkTheme = !this.isDarkTheme;
 }
 }

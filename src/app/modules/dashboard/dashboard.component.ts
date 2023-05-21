@@ -43,7 +43,6 @@ export class DashboardComponent {
   pieCharts:any = [];
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
-  isDarkTheme= true;
   @ViewChild(MatPaginator) paginator: MatPaginator | any;
 
 constructor(private dashboardService:DashboardService){}
@@ -56,4 +55,5 @@ ngOnInit(){
 ngAfterViewInit() {
   this.dataSource.paginator = this.paginator;
 }
+
 }

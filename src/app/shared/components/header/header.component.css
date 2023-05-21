@@ -1,3 +1,9 @@
 ul li{
     list-style: none;
 }
+.person{
+    margin-top: 10px;
+}
+.brightness{
+    margin-top: 15px;
+}

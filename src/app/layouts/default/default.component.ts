@@ -3,13 +3,14 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-default',
   templateUrl: './default.component.html',
-  styleUrls: ['./default.component.css']
+  styleUrls: ['./default.component.css'],
 })
 export class DefaultComponent {
-sideBarOpen = true;
-constructor(){}
-ngOnInit(){}
-sideBarToggler(){
-this.sideBarOpen=!this.sideBarOpen;
-}
+  sideBarOpen = true;
+  isDarkTheme = true;
+  constructor() {}
+  ngOnInit() {}
+  sideBarToggler() {
+    this.sideBarOpen = !this.sideBarOpen;
+  }
 }

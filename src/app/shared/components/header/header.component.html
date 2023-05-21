@@ -4,7 +4,7 @@
         <button mat-icon-button (click)="toggleSideBar()">
             <mat-icon>menu</mat-icon>
         </button>
-        <span>App Logo</span>
+        <span>Dashboard</span>
         <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
             <ul fxLayout="row" fxLayoutGap="20px">
                 <li>
@@ -18,7 +18,7 @@
                     </button>
                 </li>
                 <li>
-                    <button mat-button [matMenuTriggerFor]="menu">
+                    <button mat-button [matMenuTriggerFor]="menu" class="person">
                         <mat-icon>person outline</mat-icon>
                     </button>
                     <mat-menu #menu="matMenu">
@@ -28,9 +28,12 @@
                         </button>
                     </mat-menu>
                 </li>
-                <li><mat-slide-toggle (click)="toggleTheme()">Dark</mat-slide-toggle></li>
+                <li><mat-slide-toggle (click)="toggleTheme()" class="brightness">
+                    <mat-icon>brightness_2</mat-icon>
+                </mat-slide-toggle></li>
             </ul>
         </div>
     </mat-toolbar-row>
 </mat-toolbar>
+<mat-divider></mat-divider>
 </div>

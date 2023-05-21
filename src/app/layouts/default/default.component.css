@@ -12,3 +12,6 @@ mat-drawer-container {
 mat-drawer-content {
     padding: 20px;
 }
+.dark{
+    background-color: black;
+}

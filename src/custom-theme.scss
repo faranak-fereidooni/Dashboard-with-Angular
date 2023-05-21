@@ -34,11 +34,11 @@ $Dashboard-dark-theme: mat.define-dark-theme((
     warn: $Dashboard-warn,
   )
 ));
-.dark-theme{
-  @include mat.all-component-themes($Dashboard-dark-theme);
-}
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include mat.all-component-themes($Dashboard-theme);
+@include mat.all-component-themes($Dashboard-dark-theme);
 
+.dark-theme{
+@include mat.all-component-themes($Dashboard-dark-theme);
+}
