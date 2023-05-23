@@ -4,6 +4,10 @@ ul li{
 .person{
     margin-top: 10px;
 }
-.brightness{
-    margin-top: 15px;
+.mat-icon {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.darkMode{
+    margin-top: 13px;
 }

@@ -1,7 +1,4 @@
 
-.stats-card .mat-card{
+.stats-cards .mat-card{
     overflow: hidden;
 }
-table {
-    width: 100%;
-  }

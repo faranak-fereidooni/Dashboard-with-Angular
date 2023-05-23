@@ -6,7 +6,7 @@
         </button>
         <span>Dashboard</span>
         <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
-            <ul fxLayout="row" fxLayoutGap="20px">
+            <ul fxLayout="row" fxLayoutGap="30px">
                 <li>
                     <button mat-icon-button>
                         <mat-icon>settings</mat-icon>
@@ -28,9 +28,13 @@
                         </button>
                     </mat-menu>
                 </li>
-                <li><mat-slide-toggle (click)="toggleTheme()" class="brightness">
+                <li class="darkMode">
+                    <mat-icon>brightness_low</mat-icon>
+                    <mat-slide-toggle (click)="toggleTheme()">
+                    </mat-slide-toggle>
                     <mat-icon>brightness_2</mat-icon>
-                </mat-slide-toggle></li>
+
+                </li>
             </ul>
         </div>
     </mat-toolbar-row>

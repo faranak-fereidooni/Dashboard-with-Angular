@@ -17,6 +17,8 @@ import { CardComponent } from './widgets/card/card.component';
 import { PieComponent } from './widgets/pie/pie.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { TableComponent } from './widgets/table/table.component';
+import { MatTableModule } from '@angular/material/table'  
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     AreaComponent,
     CardComponent,
     PieComponent,
+    TableComponent,
   ],
   imports: [
     CommonModule,
@@ -40,6 +43,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     HighchartsChartModule,
     MatPaginatorModule,
     MatSlideToggleModule,
+    MatTableModule
   ],
   exports: [
     HeaderComponent,
@@ -48,6 +52,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     AreaComponent,
     CardComponent,
     PieComponent,
+    TableComponent
   ]
 })
 export class SharedModule { }

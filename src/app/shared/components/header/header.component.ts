@@ -11,9 +11,9 @@ export class HeaderComponent {
   
 toggleSideBar(){
 this.toggleSideBarForMe.emit();
-setTimeout(()=>{
+  setTimeout(()=>{
   window.dispatchEvent(new Event('resize'));
-}, 300)
+}, 300);
 }
 toggleTheme(){
   this.isDarkTheme = !this.isDarkTheme;

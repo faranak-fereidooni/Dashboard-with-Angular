@@ -13,4 +13,7 @@ export class DefaultComponent {
   sideBarToggler() {
     this.sideBarOpen = !this.sideBarOpen;
   }
+  darkToggle(){
+    this.isDarkTheme=!this.isDarkTheme;
+  }
 }

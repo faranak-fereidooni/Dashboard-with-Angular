@@ -33,8 +33,8 @@ export class CardComponent {
         text: null,
     },
     tooltip: {
-        shared: true,
-        headerFormat: '<span style="font-size:12px"><b>{point.key}</b></span><br>'
+        split: true,
+        outside: true
     },
     legend:{
       enabled:false
