@@ -6,16 +6,18 @@ import { Component,Output,EventEmitter } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  isDarkTheme = true;
+  isDarkTheme = false;
   @Output() toggleSideBarForMe: EventEmitter<any> = new EventEmitter();
-  
+  @Output() toggleThemeForMe :EventEmitter <any> = new EventEmitter();
+
 toggleSideBar(){
 this.toggleSideBarForMe.emit();
   setTimeout(()=>{
   window.dispatchEvent(new Event('resize'));
 }, 300);
 }
+
 toggleTheme(){
-  this.isDarkTheme = !this.isDarkTheme;
+  this.toggleThemeForMe.emit();
 }
 }

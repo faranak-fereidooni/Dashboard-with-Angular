@@ -1,4 +1,5 @@
-<div [ngClass]="isDarkTheme? 'dark-theme' : 'light-theme'">
+
+<div>
 <mat-toolbar color="primary">
     <mat-toolbar-row>
         <button mat-icon-button (click)="toggleSideBar()">
@@ -29,10 +30,10 @@
                     </mat-menu>
                 </li>
                 <li class="darkMode">
-                    <mat-icon>brightness_low</mat-icon>
+                    <mat-icon>brightness_5</mat-icon>
                     <mat-slide-toggle (click)="toggleTheme()">
                     </mat-slide-toggle>
-                    <mat-icon>brightness_2</mat-icon>
+                    <mat-icon>bedtime</mat-icon>
 
                 </li>
             </ul>

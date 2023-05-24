@@ -1,5 +1,5 @@
-<div [ngClass]="isDarkTheme? 'dark-theme' : 'light-theme'">
-<app-header (toggleSideBarForMe)="sideBarToggler()"></app-header>
+<div [ngClass]="isDarkMode? 'darkMode' : 'light-theme'">
+<app-header (toggleSideBarForMe)="sideBarToggler()" (toggleThemeForMe)="toggleTheme()"></app-header>
 <mat-drawer-container>
     <mat-drawer mode="side" [opened]="sideBarOpen">
         <app-sidebar></app-sidebar>

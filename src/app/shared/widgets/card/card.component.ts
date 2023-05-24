@@ -52,6 +52,7 @@ export class CardComponent {
       title:{
         text:null
       },
+      color :['#009688'],
       startOnTick:false,
       endOnTick:false,
       tickOptions:[]

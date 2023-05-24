@@ -10,7 +10,6 @@ export class DashboardComponent {
   bigChart:any = [];
   cards:any = [];
   pieCharts:any = [];
-  isDarkTheme=true;
 
 constructor(private dashboardService:DashboardService){}
 

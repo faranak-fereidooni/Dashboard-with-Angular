@@ -1,3 +1,4 @@
+import { OverlayContainer } from '@angular/cdk/overlay';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,13 +8,19 @@ import { Component } from '@angular/core';
 })
 export class DefaultComponent {
   sideBarOpen = true;
-  isDarkTheme = true;
-  constructor() {}
-  ngOnInit() {}
+  isDarkMode = false;
+constructor(private overlayContainer:OverlayContainer){}
   sideBarToggler() {
     this.sideBarOpen = !this.sideBarOpen;
   }
-  darkToggle(){
-    this.isDarkTheme=!this.isDarkTheme;
+  toggleTheme() {
+    this.isDarkMode = !this.isDarkMode;
+    // if (this.isDarkMode) {
+    //   document.body.classList.remove('darkMode');
+    // } else {
+    //   document.body.classList.add('darkMode');
+    // }
   }
-}
+
+  }
+

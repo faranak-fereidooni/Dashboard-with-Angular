@@ -19,7 +19,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { TableComponent } from './widgets/table/table.component';
 import { MatTableModule } from '@angular/material/table'  
-
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -43,7 +43,9 @@ import { MatTableModule } from '@angular/material/table'
     HighchartsChartModule,
     MatPaginatorModule,
     MatSlideToggleModule,
-    MatTableModule
+    MatTableModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     HeaderComponent,

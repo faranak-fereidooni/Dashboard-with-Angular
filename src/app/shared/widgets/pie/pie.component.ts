@@ -26,6 +26,8 @@ export class PieComponent {
           text: 'Random Data',
           align: 'left'
       },
+      colors:['#009688','#ffff75','#c234fa','#8dddfc','#f786d7','#67cfc5','#ffff75','#fcba1e'],
+
       tooltip: {
           pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
       },
