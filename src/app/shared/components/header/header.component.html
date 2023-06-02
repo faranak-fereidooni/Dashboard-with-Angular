@@ -1,44 +1,41 @@
-
 <div>
-<mat-toolbar color="primary">
+  <mat-toolbar color="primary">
     <mat-toolbar-row>
-        <button mat-icon-button (click)="toggleSideBar()">
-            <mat-icon>menu</mat-icon>
-        </button>
-        <span>Dashboard</span>
-        <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
-            <ul fxLayout="row" fxLayoutGap="30px">
-                <li>
-                    <button mat-icon-button>
-                        <mat-icon>settings</mat-icon>
-                    </button>
-                </li>
-                <li>
-                    <button mat-icon-button>
-                        <mat-icon>help outline</mat-icon>
-                    </button>
-                </li>
-                <li>
-                    <button mat-button [matMenuTriggerFor]="menu" class="person">
-                        <mat-icon>person outline</mat-icon>
-                    </button>
-                    <mat-menu #menu="matMenu">
-                        <button mat-menu-item>
-                            <mat-icon>exit_to_app</mat-icon>
-                            Sign out
-                        </button>
-                    </mat-menu>
-                </li>
-                <li class="darkMode">
-                    <mat-icon>brightness_5</mat-icon>
-                    <mat-slide-toggle (click)="toggleTheme()">
-                    </mat-slide-toggle>
-                    <mat-icon>bedtime</mat-icon>
-
-                </li>
-            </ul>
-        </div>
+      <button mat-icon-button (click)="toggleSideBar()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>Dashboard</span>
+      <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
+        <ul fxLayout="row" fxLayoutGap="30px">
+          <li>
+            <button mat-icon-button>
+              <mat-icon>settings</mat-icon>
+            </button>
+          </li>
+          <li>
+            <button mat-icon-button>
+              <mat-icon>help outline</mat-icon>
+            </button>
+          </li>
+          <li>
+            <button mat-button [matMenuTriggerFor]="menu" class="person">
+              <mat-icon>person outline</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>
+                <mat-icon>exit_to_app</mat-icon>
+                Sign out
+              </button>
+            </mat-menu>
+          </li>
+          <li class="darkMode">
+            <mat-icon>brightness_5</mat-icon>
+            <mat-slide-toggle (click)="toggleTheme()"> </mat-slide-toggle>
+            <mat-icon>bedtime</mat-icon>
+          </li>
+        </ul>
+      </div>
     </mat-toolbar-row>
-</mat-toolbar>
-<mat-divider></mat-divider>
+  </mat-toolbar>
+  <mat-divider></mat-divider>
 </div>

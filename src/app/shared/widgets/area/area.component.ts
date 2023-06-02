@@ -2,6 +2,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 import * as Highcharts from 'highcharts';
 import HC_exporting from 'highcharts/modules/exporting';
 import darkTheme from 'highcharts/themes/dark-unica';
+import { ShareDataService } from 'src/app/share-data.service';
 
 @Component({
   selector: 'app-widget-area',
@@ -11,11 +12,38 @@ import darkTheme from 'highcharts/themes/dark-unica';
 export class AreaComponent {
   chartOptions: {} | any;
   Highcharts = Highcharts;
-  isDarkMode = false;
+  isDarkTheme = false;
   @Input() data = [];
-  constructor() {}
+
+  constructor(private shareDataService: ShareDataService) {}
+
   ngOnInit() {
-    darkTheme(Highcharts);
+    this.shareDataService.subject.subscribe((isDarkMode) => {
+      if (isDarkMode) {
+        this.isDarkTheme = true;
+        darkTheme(Highcharts);
+        const theme1 = {
+          chart: {
+            type: 'area',
+            backgroundColor: '#424242',
+            fill: '#424242',
+            color: 'white',
+          },
+        };
+        Highcharts.setOptions(theme1);
+      } else {
+        this.isDarkTheme = false;
+        const theme2 = {
+          chart: {
+            type: 'area',
+            backgroundColor: '#ffffff',
+            fill: '#ffffff',
+            color: '#424242',
+          },
+        };
+        Highcharts.setOptions(theme2);
+      }
+    });
     this.chartOptions = {
       chart: {
         type: 'area',
@@ -39,6 +67,9 @@ export class AreaComponent {
       },
       exporting: {
         enabled: true,
+      },
+      accessibility: {
+        enabled: false,
       },
       series: [
         {

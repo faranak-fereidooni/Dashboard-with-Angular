@@ -1,23 +1,56 @@
 <div>
-<div>
+  <div>
     <app-widget-area [data]="bigChart"></app-widget-area>
-</div>
-<br>
-<mat-divider></mat-divider>
-<br>
-<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="5px" class="stats-cards">
-  <mat-card fxFlex="24"><app-widget-card label="New Users" total="12k" percentage="50" [data]="cards"></app-widget-card></mat-card>
-  <mat-card fxFlex="24"><app-widget-card label="Users Retention" total="10k" percentage="40" [data]="cards"></app-widget-card></mat-card>
-  <mat-card fxFlex="24"><app-widget-card label="Users Engagmentn" total="8k" percentage="30" [data]="cards"></app-widget-card></mat-card>
-  <mat-card fxFlex="24"><app-widget-card label="Referal" total="6k" percentage="20" [data]="cards"></app-widget-card></mat-card>
-</div>
-<br>
-<mat-divider></mat-divider>
-<br>
-<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px">
+  </div>
+  <br />
+  <mat-divider></mat-divider>
+  <br />
+  <div
+    fxLayout="row"
+    fxLayoutAlign="space-between center"
+    fxLayoutGap="5px"
+    class="stats-cards"
+  >
+    <mat-card fxFlex="24"
+      ><app-widget-card
+        label="New Users"
+        total="12k"
+        percentage="50"
+        [data]="cards"
+      ></app-widget-card
+    ></mat-card>
+    <mat-card fxFlex="24"
+      ><app-widget-card
+        label="Users Retention"
+        total="10k"
+        percentage="40"
+        [data]="cards"
+      ></app-widget-card
+    ></mat-card>
+    <mat-card fxFlex="24"
+      ><app-widget-card
+        label="Users Engagmentn"
+        total="8k"
+        percentage="30"
+        [data]="cards"
+      ></app-widget-card
+    ></mat-card>
+    <mat-card fxFlex="24"
+      ><app-widget-card
+        label="Referal"
+        total="6k"
+        percentage="20"
+        [data]="cards"
+      ></app-widget-card
+    ></mat-card>
+  </div>
+  <br />
+  <mat-divider></mat-divider>
+  <br />
+  <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px">
     <div fxFlex="60">
       <app-widget-table></app-widget-table>
     </div>
     <div fxFlex="40"><app-widget-pie [data]="pieCharts"></app-widget-pie></div>
-</div>
+  </div>
 </div>

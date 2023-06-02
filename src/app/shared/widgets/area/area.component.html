@@ -1,13 +1,13 @@
-<highcharts-chart 
+<highcharts-chart
   [Highcharts]="Highcharts"
   [options]="chartOptions"
-  *ngIf="!isDarkMode;"
-  style="width: 100%; height: 400px; background-color:'#0000'; display: block;"
+  *ngIf="!isDarkTheme"
+  style="width: 100%; height: 400px; background-color: '#0000'; display: block"
 ></highcharts-chart>
 
-<highcharts-chart 
+<highcharts-chart
   [Highcharts]="Highcharts"
   [options]="chartOptions"
-  *ngIf="isDarkMode;"
-  style="width: 100%; height: 400px; background-color:'#fff'; display: block;"
+  *ngIf="isDarkTheme"
+  style="width: 100%; height: 400px; background-color: '#fff'; display: block"
 ></highcharts-chart>

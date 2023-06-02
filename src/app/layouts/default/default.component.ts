@@ -1,5 +1,5 @@
-import { OverlayContainer } from '@angular/cdk/overlay';
 import { Component } from '@angular/core';
+import { ShareDataService } from 'src/app/share-data.service';
 
 @Component({
   selector: 'app-default',
@@ -9,18 +9,16 @@ import { Component } from '@angular/core';
 export class DefaultComponent {
   sideBarOpen = true;
   isDarkMode = false;
-constructor(private overlayContainer:OverlayContainer){}
+  darkMode: boolean | undefined;
+
+  constructor(private shareDataService: ShareDataService) {}
+
   sideBarToggler() {
     this.sideBarOpen = !this.sideBarOpen;
   }
   toggleTheme() {
     this.isDarkMode = !this.isDarkMode;
-    // if (this.isDarkMode) {
-    //   document.body.classList.remove('darkMode');
-    // } else {
-    //   document.body.classList.add('darkMode');
-    // }
+    this.shareDataService.subject.next(this.isDarkMode);
+    this.darkMode = this.isDarkMode;
   }
-
-  }
-
+}

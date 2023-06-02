@@ -2,6 +2,8 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 mat-drawer {
     width:290px;
@@ -11,7 +13,4 @@ mat-drawer-container {
 }
 mat-drawer-content {
     padding: 20px;
-}
-.dark{
-    background-color: black;
 }

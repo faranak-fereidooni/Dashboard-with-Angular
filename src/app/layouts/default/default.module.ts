@@ -9,14 +9,10 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatCardModule } from '@angular/material/card';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { DashboardService } from 'src/app/modules/dashboard.service';
-import { MatPaginatorModule } from '@angular/material/paginator'
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
-  declarations: [
-    DefaultComponent,
-    DashboardComponent,
-    
-  ],
+  declarations: [DefaultComponent, DashboardComponent],
   imports: [
     CommonModule,
     RouterModule,
@@ -27,10 +23,6 @@ import { MatPaginatorModule } from '@angular/material/paginator'
     FlexLayoutModule,
     MatPaginatorModule,
   ],
-  providers: [
-    DashboardService
-  ]
+  providers: [DashboardService],
 })
-export class DefaultModule { 
-  
-}
+export class DefaultModule {}
