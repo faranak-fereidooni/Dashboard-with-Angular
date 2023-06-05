@@ -21,24 +21,51 @@ export class PieComponent {
       if (isDarkMode) {
         this.isDarkTheme = true;
         darkTheme(Highcharts);
-        const theme2 = {
+        const darkThemeOptions = {
           chart: {
             type: 'area',
             backgroundColor: '#424242',
-            fill: '#424242',
+            style:{
+              font: '16px "Trebuchet MS", Verdana, sans-serif',
+            },
           },
+          plotOptions: {
+            pie: {
+              borderColor: 'transparent', // Remove outline color
+              borderWidth: 0 // Remove outline width
+            }
+          },
+          
         };
-        Highcharts.setOptions(theme2);
+        Highcharts.setOptions(darkThemeOptions);
+        Highcharts.charts.forEach((chart) => {
+          if (chart) {
+            chart.update(darkThemeOptions);
+          }
+        });
       } else {
         this.isDarkTheme = false;
-        const theme2 = {
+        const lightThemeOptions = {
           chart: {
             type: 'area',
             backgroundColor: '#ffffff',
-            fill: '#ffffff',
+            style:{
+              font: '16px "Trebuchet MS", Verdana, sans-serif',
+            },
+          },
+          plotOptions: {
+            pie: {
+              borderColor: 'transparent', // Remove outline color
+              borderWidth: 0 // Remove outline width
+            }
           },
         };
-        Highcharts.setOptions(theme2);
+        Highcharts.setOptions(lightThemeOptions);
+        Highcharts.charts.forEach((chart) => {
+          if (chart) {
+            chart.update(lightThemeOptions);
+          }
+        });
       }
     });
     this.chartOptions = {
@@ -47,22 +74,24 @@ export class PieComponent {
         plotBorderWidth: null,
         plotShadow: false,
         type: 'pie',
+        
       },
       title: {
-        text: 'Random Data',
+        text: 'RANDOM DATA',
         align: 'left',
+        style: { font: 'bold 1.2em' },
       },
       colors: [
-        '#009688',
+        '#acfab5',
+        '#f7bbfc',
+        '#39ddfa',
         '#ffff75',
-        '#c234fa',
-        '#8dddfc',
-        '#f786d7',
+        '#a3f7f0',
         '#67cfc5',
         '#ffff75',
         '#fcba1e',
       ],
-
+    
       tooltip: {
         pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>',
       },
@@ -82,7 +111,7 @@ export class PieComponent {
         },
       },
       exporting: {
-        enabled: true,
+        enabled: false,
       },
       credits: {
         enabled: false,

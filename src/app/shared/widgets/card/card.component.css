@@ -2,12 +2,16 @@ h4{
     margin-bottom: 5px;
 }
 .total {
-    font-size: 3em;
+    font-size: 2.7em;
+}
+.text {
+    padding: 0 12px 5px 12px;
+    font-family: 'Roboto', 'sans-serif''Roboto', 'sans-serif';
 }
 .mat-icon,
 .description {
     color: green;
-    font-size: 2em;
+    font-size: 1.7em;
 }
 .mat-icon{
     position: relative;

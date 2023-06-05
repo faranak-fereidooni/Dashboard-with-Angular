@@ -1,7 +1,10 @@
 footer{
     padding:20px;
 }
-.darkMode{
-    background-color: #424242;
+:host ::ng-deep footer {
+    background-color:  #3f51b5;
     color:#fff;
-}
+  }
+  mat-divider{
+    background-color: #3f51b5;
+  }

@@ -1,9 +1,12 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import * as Highcharts from 'highcharts';
 import HC_exporting from 'highcharts/modules/exporting';
 import darkTheme from 'highcharts/themes/dark-unica';
 import { ShareDataService } from 'src/app/share-data.service';
 
+interface ChartOptions extends Highcharts.Options {
+  yAxis?: Highcharts.YAxisOptions;
+}
 @Component({
   selector: 'app-widget-area',
   templateUrl: './area.component.html',
@@ -22,37 +25,88 @@ export class AreaComponent {
       if (isDarkMode) {
         this.isDarkTheme = true;
         darkTheme(Highcharts);
-        const theme1 = {
+        const darkThemeOptions: ChartOptions = {
           chart: {
             type: 'area',
             backgroundColor: '#424242',
-            fill: '#424242',
-            color: 'white',
           },
+          title: {
+            style: { color:'rgb(255, 255, 255)' },
+          },
+          subtitle: {
+            style:{color:'rgb(255,255,255)'}
+          },
+          yAxis: {
+            labels: {
+              style: {
+                color: 'white' 
+              }
+            },
+            title: {
+              style: {
+                color: 'white' 
+              },
+            },
+          },
+          xAxis: {
+            labels:{
+            style:{
+              backgroundColor: 'rgb(0,0,0)'}}}
         };
-        Highcharts.setOptions(theme1);
+        Highcharts.setOptions(darkThemeOptions);
+        Highcharts.charts.forEach((chart) => {
+          if (chart) {
+            chart.update(darkThemeOptions);
+          }
+        });
       } else {
         this.isDarkTheme = false;
-        const theme2 = {
+        const lightThemeOptions: ChartOptions = {
           chart: {
             type: 'area',
-            backgroundColor: '#ffffff',
-            fill: '#ffffff',
-            color: '#424242',
+            backgroundColor: '#ffffff'
           },
+          title: {
+            style: { color:'rgb(0, 0, 0)' },
+          },
+          subtitle: {
+            style:{color:'rgb(0,0,0)'}
+          },
+          yAxis: {
+            labels: {
+              style: {
+                color: '#000000' 
+              }
+            },
+            title: {
+              style: {
+                color: '#000000' 
+              },
+            }
+          },
+          xAxis: {
+            labels:{
+            style:{
+              backgroundColor: 'rgb(255,255,255)'}}}
         };
-        Highcharts.setOptions(theme2);
+        Highcharts.setOptions(lightThemeOptions);
+        Highcharts.charts.forEach((chart) => {
+          if (chart) {
+            chart.update(lightThemeOptions);
+          }
+        });
       }
     });
+
     this.chartOptions = {
       chart: {
         type: 'area',
       },
       title: {
-        text: 'Random Data',
+        text: 'RANDOM DATA',
         align: 'left',
+        style: { font: 'bold 1.2em' },
       },
-      colors: ['#acfab5', '#f7bbfc', '#39ddfa', '#ffff75', '#a3f7f0'],
       subtitle: {
         text: 'Demo',
         align: 'left',
@@ -62,13 +116,12 @@ export class AreaComponent {
         headerFormat:
           '<span style="font-size:12px"><b>{point.key}</b></span><br>',
       },
+      colors: ['#acfab5', '#f7bbfc', '#39ddfa', '#ffff75', '#a3f7f0'],
+
       credits: {
         enabled: false,
       },
       exporting: {
-        enabled: true,
-      },
-      accessibility: {
         enabled: false,
       },
       series: [
@@ -94,6 +147,7 @@ export class AreaComponent {
         },
       ],
     };
+
     HC_exporting(Highcharts);
     setTimeout(() => {
       window.dispatchEvent(new Event('resize'));

@@ -6,7 +6,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-  isDarkTheme = false;
+  currentIcon: string = 'dark_mode';
   @Output() toggleSideBarForMe: EventEmitter<any> = new EventEmitter();
   @Output() toggleThemeForMe: EventEmitter<any> = new EventEmitter();
 
@@ -19,5 +19,11 @@ export class HeaderComponent {
 
   toggleTheme() {
     this.toggleThemeForMe.emit();
+    // for change icon in darkMode and lightMode
+    if (this.currentIcon === 'dark_mode') {
+      this.currentIcon = 'light_mode';
+    } else {
+      this.currentIcon = 'dark_mode';
+    }
   }
 }

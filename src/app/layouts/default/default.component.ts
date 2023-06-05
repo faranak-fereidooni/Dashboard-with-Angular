@@ -23,6 +23,7 @@ export class DefaultComponent {
     this.isDarkMode = !this.isDarkMode;
     this.shareDataService.subject.next(this.isDarkMode);
     
+    // for overlay
     const darkModeClass = 'darkMode'
     const classes = this.overlayContainer.getContainerElement().classList;
     if(this.isDarkMode){
