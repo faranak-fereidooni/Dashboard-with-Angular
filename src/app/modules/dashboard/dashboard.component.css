@@ -1,4 +1,10 @@
-
-.stats-cards .mat-card{
+.chart-container,
+.card-container,
+.tabel-container ,
+.pieChart-container{
+    border-radius: 15px;
+    box-shadow: 0px 4px 7px 1px rgba(124, 123, 123, 0.5);
     overflow: hidden;
+    background-color:transparent !important;
 }
+

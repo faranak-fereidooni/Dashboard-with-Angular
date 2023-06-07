@@ -54,7 +54,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     AreaComponent,
     CardComponent,
     PieComponent,
-    TableComponent
+    TableComponent,
   ]
 })
 export class SharedModule { }

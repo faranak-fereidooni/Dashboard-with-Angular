@@ -1,17 +1,18 @@
-<div>
-  <div>
-    <app-widget-area [data]="bigChart"></app-widget-area>
+<div class="dashboard-container">
+  <div class="chart-container">
+    <app-widget-area [data]="bigChart" class="highchart"></app-widget-area>
   </div>
   <br />
   <mat-divider></mat-divider>
   <br />
   <div
     fxLayout="row"
+    fxLayout.xs="column"
     fxLayoutAlign="space-between center"
+    fxLayoutAlign.xs="center stretch"
     fxLayoutGap="5px"
-    class="stats-cards"
   >
-    <mat-card fxFlex="24"
+    <mat-card fxFlex="24" fxFlex.xs="100%" fxLayout="column" fxLayoutGap="5px" class="card-container"
       ><app-widget-card
         label="New Users"
         total="12k"
@@ -19,7 +20,7 @@
         [data]="cards"
       ></app-widget-card
     ></mat-card>
-    <mat-card fxFlex="24"
+    <mat-card fxFlex="24" fxFlex.xs="100%" fxLayout="column" fxLayoutGap="5px" class="card-container"
       ><app-widget-card
         label="Users Retention"
         total="10k"
@@ -27,7 +28,7 @@
         [data]="cards"
       ></app-widget-card
     ></mat-card>
-    <mat-card fxFlex="24"
+    <mat-card fxFlex="24" fxFlex.xs="100%" fxLayout="column" class="card-container"
       ><app-widget-card
         label="Users Engagmentn"
         total="8k"
@@ -35,7 +36,7 @@
         [data]="cards"
       ></app-widget-card
     ></mat-card>
-    <mat-card fxFlex="24"
+    <mat-card fxFlex="24" fxFlex.xs="100%" fxLayout="column" class="card-container"
       ><app-widget-card
         label="Referal"
         total="6k"
@@ -47,10 +48,21 @@
   <br />
   <mat-divider></mat-divider>
   <br />
-  <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px">
-    <div fxFlex="60">
-      <app-widget-table></app-widget-table>
+
+  <mat-grid-list cols="2" rowHeight="1:1">
+    <div
+      fxLayout="row"
+      fxLayout.xs="column"
+      fxLayoutAlign="space-between center"
+      fxLayoutGap="20px"
+      fxLayoutAlign.xs="center stretch"
+    >
+      <div fxFlex="60" fxFlex.xs="100%" fxLayout="column" class="tabel-container">
+        <app-widget-table></app-widget-table>
+      </div>
+      <div fxFlex="40" fxFlex.xs="100%" class="pieChart-container">
+        <app-widget-pie [data]="pieCharts"></app-widget-pie>
+      </div>
     </div>
-    <div fxFlex="40"><app-widget-pie [data]="pieCharts"></app-widget-pie></div>
-  </div>
+  </mat-grid-list>
 </div>

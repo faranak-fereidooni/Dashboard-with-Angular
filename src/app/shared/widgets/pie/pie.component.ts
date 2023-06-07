@@ -29,12 +29,6 @@ export class PieComponent {
               font: '16px "Trebuchet MS", Verdana, sans-serif',
             },
           },
-          plotOptions: {
-            pie: {
-              borderColor: 'transparent', // Remove outline color
-              borderWidth: 0 // Remove outline width
-            }
-          },
           
         };
         Highcharts.setOptions(darkThemeOptions);
@@ -52,12 +46,6 @@ export class PieComponent {
             style:{
               font: '16px "Trebuchet MS", Verdana, sans-serif',
             },
-          },
-          plotOptions: {
-            pie: {
-              borderColor: 'transparent', // Remove outline color
-              borderWidth: 0 // Remove outline width
-            }
           },
         };
         Highcharts.setOptions(lightThemeOptions);
@@ -79,7 +67,10 @@ export class PieComponent {
       title: {
         text: 'RANDOM DATA',
         align: 'left',
-        style: { font: 'bold 1.2em' },
+        style: { font: 'bold 1.2em'},
+        // useHTML: true,
+        // y: 35,
+        // x: 20,
       },
       colors: [
         '#acfab5',
@@ -108,8 +99,9 @@ export class PieComponent {
             enabled: true,
             format: '<b>{point.name}</b>: {point.percentage:.1f} %',
           },
+
         },
-      },
+      },   
       exporting: {
         enabled: false,
       },

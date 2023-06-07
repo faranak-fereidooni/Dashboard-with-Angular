@@ -1,0 +1,51 @@
+.contact-form{
+    height: 100vh;    
+}
+.contact-header{
+    text-align: center;
+}
+.contact-form .example-full-width,
+.contact-form button{
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+  }  
+  .example-full-width textarea{
+    height: 200px;
+  }
+  ::ng-deep .mdc-text-field--filled,
+  .contact-form button {
+    border-radius: 28px !important;
+    box-shadow: 2px 7px 8px #9a9a9acc;
+  }
+  .contact-form button{
+    height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  ::ng-deep .mat-snack-bar-container.success-snackbar {
+    background: rgb(143, 246, 91) !important;
+    color: white !important;
+    display: block;
+    margin: 0 auto;
+  }
+  ::ng-deep .success-snackbar button {
+    background: rgb(143, 246, 91) !important;
+    color: white !important;
+}
+::ng-deep .error-snackbar{
+    background: rgb(255, 2, 2) !important;
+    color: white !important;
+    display: block;
+    margin: 0 auto;
+}
+::ng-deep .error-snackbar button {
+    background: rgb(255, 2, 2) !important;
+    color: white !important;
+}
+   @media screen and (min-width:280px) and (max-width:540px){
+    .contact-form .example-full-width,
+    .contact-form button{
+        width: 100%;
+  } 
+   }

@@ -31,27 +31,35 @@ export class AreaComponent {
             backgroundColor: '#424242',
           },
           title: {
-            style: { color:'rgb(255, 255, 255)' },
+            style: { fontSize: '20px', fontWeight: 'bold',color: 'rgb(255, 255, 255)' },
           },
           subtitle: {
-            style:{color:'rgb(255,255,255)'}
+            style: { color: 'rgb(255,255,255)' },
+          },
+          tooltip: {
+            backgroundColor: '#000',
+            style: {
+              color: '#fff',
+            },
           },
           yAxis: {
             labels: {
               style: {
-                color: 'white' 
-              }
+                color: 'white',
+              },
             },
             title: {
               style: {
-                color: 'white' 
+                color: 'white',
               },
             },
           },
-          xAxis: {
-            labels:{
-            style:{
-              backgroundColor: 'rgb(0,0,0)'}}}
+          legend: {
+            backgroundColor: 'transparent',
+            itemStyle: {
+              color: 'white',
+            },
+          },
         };
         Highcharts.setOptions(darkThemeOptions);
         Highcharts.charts.forEach((chart) => {
@@ -64,30 +72,38 @@ export class AreaComponent {
         const lightThemeOptions: ChartOptions = {
           chart: {
             type: 'area',
-            backgroundColor: '#ffffff'
+            backgroundColor: '#ffffff',
           },
           title: {
-            style: { color:'rgb(0, 0, 0)' },
+            style: { fontSize: '20px', fontWeight: 'bold',color: 'rgb(0, 0, 0)' },
           },
           subtitle: {
-            style:{color:'rgb(0,0,0)'}
+            style: { color: 'rgb(0,0,0)' },
+          },
+          tooltip: {
+            backgroundColor: '#fff',
+            style: {
+              color: '#000',
+            },
           },
           yAxis: {
             labels: {
               style: {
-                color: '#000000' 
-              }
+                color: '#000000',
+              },
             },
             title: {
               style: {
-                color: '#000000' 
+                color: '#000000',
               },
-            }
+            },
           },
-          xAxis: {
-            labels:{
-            style:{
-              backgroundColor: 'rgb(255,255,255)'}}}
+          legend: {
+            backgroundColor: 'transparent',
+            itemStyle: {
+              color: 'rgb(0,0,0)',
+            },
+          },
         };
         Highcharts.setOptions(lightThemeOptions);
         Highcharts.charts.forEach((chart) => {
@@ -105,12 +121,12 @@ export class AreaComponent {
       title: {
         text: 'RANDOM DATA',
         align: 'left',
-        style: { font: 'bold 1.2em' },
+        style: { fontSize: '20px', fontWeight: 'bold' },
+        // useHTML: true,
+        // y: 30,
+        // x: 20,
       },
-      subtitle: {
-        text: 'Demo',
-        align: 'left',
-      },
+
       tooltip: {
         shared: true,
         headerFormat:
@@ -146,6 +162,23 @@ export class AreaComponent {
           data: [2019, 2189, 2150, 2217, 2175, 2257, 2344, 2176, 2186],
         },
       ],
+      responsive: {
+        rules: [
+          {
+            condition: {
+              maxWidth: 500,
+              callback() {
+                return true;
+              },
+            },
+            chartOptions: {
+              legend: {
+                enabled: false,
+              },
+            },
+          },
+        ],
+      },
     };
 
     HC_exporting(Highcharts);

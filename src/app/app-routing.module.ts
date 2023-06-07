@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DefaultComponent } from './layouts/default/default.component';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
-import { PostsComponent } from './modules/posts/posts.component';
 import { ContactsComponent } from './modules/contacts/contacts.component';
-import { LeadsComponent } from './modules/leads/leads.component';
+import { ProfileComponent } from './modules/profile/profile.component';
+import { CalendarComponent } from './modules/calendar/calendar.component';
 
 const routes: Routes = [
   {
@@ -17,16 +17,16 @@ const routes: Routes = [
         component: DashboardComponent,
       },
       {
-        path: 'posts',
-        component: PostsComponent,
+        path: 'profile',
+        component: ProfileComponent,
       },
       {
         path: 'contacts',
         component: ContactsComponent,
       },
       {
-        path: 'leads',
-        component: LeadsComponent,
+        path: 'calendar',
+        component: CalendarComponent,
       },
     ],
   },

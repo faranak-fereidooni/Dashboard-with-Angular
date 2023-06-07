@@ -52,7 +52,7 @@ export class CardComponent {
       title:{
         text:null
       },
-      color :['#009688'],
+      colors :['#acfab5'],
       startOnTick:false,
       endOnTick:false,
       tickOptions:[]
@@ -69,10 +69,26 @@ export class CardComponent {
       tickOptions:[]
     },
     series: [{data:this.data}],
+    responsive: {  
+      rules: [{  
+        condition: {  
+          maxWidth: 500,
+          callback(){
+            return true;
+          }  
+        },  
+        chartOptions: {  
+          legend: {  
+            enabled: false  
+          },
+        }  
+      }]  
+    }
 };
 HC_exporting(Highcharts);
   setTimeout(()=>{
   window.dispatchEvent(new Event('resize'));
 }, 300)
   }
+  
 }

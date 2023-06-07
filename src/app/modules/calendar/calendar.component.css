@@ -1,0 +1,9 @@
+
+.calendar-container{
+  height: 100vh;
+}
+.demo-inline-calendar-card {
+    width: 630px;
+    height: 100%;
+    margin: 0 auto;
+  }

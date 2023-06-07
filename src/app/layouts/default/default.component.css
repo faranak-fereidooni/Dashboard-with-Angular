@@ -17,3 +17,8 @@ mat-drawer-container {
 mat-drawer-content {
     padding: 20px;
 }
+@media screen and (min-width:280px) and (max-width:415px) {
+    mat-drawer {
+        width:390px;
+    }
+}

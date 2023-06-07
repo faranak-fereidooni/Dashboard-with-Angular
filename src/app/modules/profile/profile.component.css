@@ -1,0 +1,13 @@
+mat-card{
+    position: relative;
+}
+.profile{
+    position: absolute;
+    left:50%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.demo-inline-calendar-card {
+    width: 300px;
+  }
