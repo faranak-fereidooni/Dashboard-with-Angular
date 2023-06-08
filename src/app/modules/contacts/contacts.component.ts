@@ -4,16 +4,22 @@ import {
   FormGroupDirective,
   NgForm,
   Validators,
-  FormGroup, 
+  FormGroup,
 } from '@angular/forms';
-import {ErrorStateMatcher} from '@angular/material/core';
+import { ErrorStateMatcher } from '@angular/material/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
-
 /** Error when invalid control is dirty, touched, or submitted. */
 export class MyErrorStateMatcher implements ErrorStateMatcher {
-  isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
+  isErrorState(
+    control: FormControl | null,
+    form: FormGroupDirective | NgForm | null
+  ): boolean {
     const isSubmitted = form && form.submitted;
-    return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
+    return !!(
+      control &&
+      control.invalid &&
+      (control.dirty || control.touched || isSubmitted)
+    );
   }
 }
 
@@ -23,29 +29,34 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   styleUrls: ['./contacts.component.css'],
 })
 export class ContactsComponent {
-  emailFormControl = new FormControl('', [Validators.required, Validators.email]);
+  emailFormControl = new FormControl('', [
+    Validators.required,
+    Validators.email,
+  ]);
   nameFormControl = new FormControl('', [Validators.required]);
-  contactForm: FormGroup|any;
+  messageFormControl = new FormControl('', [Validators.required]);
+  contactForm: FormGroup | any;
   matcher = new MyErrorStateMatcher();
 
-  constructor(private snackBar: MatSnackBar) {
-    this.contactForm = new FormGroup({
-      emailFormControl : new FormControl('', [Validators.required, Validators.email]),
-      nameFormControl : new FormControl('', [Validators.required])
-    });
-  }
+  constructor(private snackBar: MatSnackBar) {}
 
-  showSuccessMessage(form: NgForm){
-    if (this.emailFormControl.valid&&this.nameFormControl.valid) {
-      console.log(this.emailFormControl.valid&&this.nameFormControl.valid)
+  showSuccessMessage() {
+    if (this.emailFormControl.valid && 
+      this.nameFormControl.valid &&
+      this.messageFormControl.valid) {
       this.snackBar.open('Your message sent successfully', 'Close', {
         duration: 3000,
-        panelClass: ['success-snackbar']
+        verticalPosition: 'top',
+        horizontalPosition: 'center',
+        panelClass: 'green-snackbar',
       });
     } else {
       this.snackBar.open('Please fill in all the fields', 'Close', {
         duration: 3000,
-        panelClass: ['error-snackbar']
+        verticalPosition: 'top',
+        horizontalPosition: 'center',
+        panelClass: 'red-snackbar',
       });
-    }}
+    }
+  }
 }
