@@ -25,13 +25,11 @@
 }
 ::ng-deep .green-snackbar {
   --mdc-snackbar-container-color: rgb(62, 251, 4);
-  --mdc-snackbar-supporting-text-color: white;
-  --mat-mdc-snack-bar-button-color: white !important;
+  --mdc-snackbar-supporting-text-color: white !important;
 }
 ::ng-deep .red-snackbar {
-  --mdc-snackbar-container-color: #f44336 ;
-  --mdc-snackbar-supporting-text-color: white ;
-  --mat-mdc-snack-bar-button-color: white !important;
+  --mdc-snackbar-container-color: #f44336;
+  --mdc-snackbar-supporting-text-color: white !important;
 }
 
 @media screen and (min-width: 280px) and (max-width: 540px) {

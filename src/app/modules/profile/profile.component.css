@@ -1,13 +1,67 @@
-mat-card{
-    position: relative;
+.profile-page {
+  font-size: 19px;
 }
-.profile{
-    position: absolute;
-    left:50%;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
+.profile-header {
+  text-align: center;
 }
-.demo-inline-calendar-card {
-    width: 300px;
-  }
+.title-card,
+.company,
+.university {
+  color: #a5a5a5;
+}
+.profile-info {
+  padding: 6px !important;
+}
+.profile-card {
+  padding-bottom: 1rem;
+}
+.circle-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px auto;
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  border: 4px dotted #727272;
+}
+.circle-wrapper img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+h5,
+h4 {
+  margin: 6px;
+}
+h6 {
+  margin: 0 5px 0 0;
+}
+.social-media-container {
+  margin-top: 2rem;
+  text-align: center;
+}
+.social-media-container fa-icon {
+  margin: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+mat-card {
+  box-shadow: 1px 3px 8px #c0bfbf;
+  border-radius: 10px;
+}
+.card {
+  min-height: 357px;
+  padding: 0.5rem;
+  width: 100%;
+}
+ul li {
+  margin-bottom: 10px;
+}
+ul li a {
+  text-decoration: none;
+  color: #52a0fa;
+}
+.project-type {
+  margin-left: 1rem;
+}

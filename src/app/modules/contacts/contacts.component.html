@@ -50,14 +50,17 @@
 
   <mat-form-field class="example-full-width">
     <mat-label>Your Message</mat-label>
-    <textarea matInput placeholder="Ex. It makes me feel..."
-    [formControl]="messageFormControl"
-      [errorStateMatcher]="matcher">
+    <textarea
+      matInput
+      placeholder="Ex. It makes me feel..."
+      [formControl]="messageFormControl"
+      [errorStateMatcher]="matcher"
+    >
     </textarea>
     <mat-hint></mat-hint>
     <mat-error
       *ngIf="
-      messageFormControl.hasError('message') &&
+        messageFormControl.hasError('message') &&
         !messageFormControl.hasError('required')
       "
     >

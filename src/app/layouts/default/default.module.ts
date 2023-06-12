@@ -19,7 +19,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { ContactsComponent } from 'src/app/modules/contacts/contacts.component';
-
+import { MatIconModule } from '@angular/material/icon';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome' 
 
 @NgModule({
   declarations: [DefaultComponent, DashboardComponent,ProfileComponent,ContactsComponent],
@@ -39,8 +40,9 @@ import { ContactsComponent } from 'src/app/modules/contacts/contacts.component';
     MatButtonModule,
     ReactiveFormsModule,
     MatInputModule,
-    FormsModule
-
+    FormsModule,
+    MatIconModule,
+    FontAwesomeModule
   ],
   providers: [DashboardService],
 })

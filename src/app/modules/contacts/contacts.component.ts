@@ -41,17 +41,19 @@ export class ContactsComponent {
   constructor(private snackBar: MatSnackBar) {}
 
   showSuccessMessage() {
-    if (this.emailFormControl.valid && 
+    if (
+      this.emailFormControl.valid &&
       this.nameFormControl.valid &&
-      this.messageFormControl.valid) {
-      this.snackBar.open('Your message sent successfully', 'Close', {
+      this.messageFormControl.valid
+    ) {
+      this.snackBar.open('Your message sent successfully', '', {
         duration: 3000,
         verticalPosition: 'top',
         horizontalPosition: 'center',
         panelClass: 'green-snackbar',
       });
     } else {
-      this.snackBar.open('Please fill in all the fields', 'Close', {
+      this.snackBar.open('Please fill in all the fields', '', {
         duration: 3000,
         verticalPosition: 'top',
         horizontalPosition: 'center',
