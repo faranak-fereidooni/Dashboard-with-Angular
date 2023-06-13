@@ -14,7 +14,7 @@
 ::ng-deep .mdc-text-field--filled,
 .contact-form button {
   border-radius: 28px !important;
-  box-shadow: 2px 7px 8px #9a9a9acc;
+  box-shadow: 0px 4px 8px #838383cc;
 }
 .contact-form button {
   height: 50px;
