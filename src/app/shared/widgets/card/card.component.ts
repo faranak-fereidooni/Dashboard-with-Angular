@@ -25,6 +25,7 @@ export class CardComponent {
         margin:[2,2,2,2],
         height:60
     },
+    colors :['#acfab5' ],
     title: {
         text: null,
         align: 'left'
@@ -52,7 +53,7 @@ export class CardComponent {
       title:{
         text:null
       },
-      colors :['#acfab5'],
+      
       startOnTick:false,
       endOnTick:false,
       tickOptions:[]

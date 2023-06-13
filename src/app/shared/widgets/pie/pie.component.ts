@@ -65,12 +65,12 @@ export class PieComponent {
         
       },
       title: {
+        margin: 50,
+        x: 27,
+        y:40,
         text: 'RANDOM DATA',
         align: 'left',
         style: { font: 'bold 1.2em'},
-        // useHTML: true,
-        // y: 35,
-        // x: 20,
       },
       colors: [
         '#acfab5',

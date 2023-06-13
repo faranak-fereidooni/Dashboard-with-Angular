@@ -119,12 +119,12 @@ export class AreaComponent {
         type: 'area',
       },
       title: {
+        margin: 50,
+        x: 27,
+        y:40,
         text: 'RANDOM DATA',
         align: 'left',
-        style: { fontSize: '20px', fontWeight: 'bold' },
-        // useHTML: true,
-        // y: 30,
-        // x: 20,
+        style: { fontSize: '20px', fontWeight: 'bold'},
       },
 
       tooltip: {

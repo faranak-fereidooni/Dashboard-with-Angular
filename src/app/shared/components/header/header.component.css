@@ -4,6 +4,18 @@ ul li{
 mat-divider{
     background-color: #3f51b5;
   }
+  .spin-animation {
+    animation: spin 0.5s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
   @media screen and (min-width:280px) and (max-width:412px) {
     .dashboard-title{
         display: none;
