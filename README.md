@@ -28,4 +28,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 # Demo
 
-[![Demo](document/Demo.mp4)](document/Demo.mp4)
+![Demo](document/Demo.gif)
