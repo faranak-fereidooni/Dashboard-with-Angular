@@ -4,6 +4,9 @@
 .profile-header {
   text-align: center;
 }
+.title-card{
+  margin-left: 8px;
+}
 .title-card,
 .company,
 .university {
@@ -47,13 +50,16 @@ h6 {
   cursor: pointer;
 }
 mat-card {
-  box-shadow: 1px 3px 8px #c0bfbf;
+  box-shadow: 0px 4px 7px 1px rgba(124, 123, 123, 0.5);
   border-radius: 10px;
 }
 .card {
-  min-height: 357px;
+  min-height: 345px;
   padding: 0.5rem;
   width: 100%;
+}
+.skills-card {
+  min-height: 346px;
 }
 ul li {
   margin-bottom: 10px;
