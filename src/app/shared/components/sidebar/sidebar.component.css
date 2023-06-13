@@ -12,12 +12,12 @@ img{
     object-fit: cover;
     border-radius: 50%;
 }
-h2{
+.name{
     padding-top: 20px;
     margin-bottom: 0;
     padding-bottom: 0;
 }
-h5{
+.gmail{
     margin-top: 10px;
     padding-top: 0;
 }
