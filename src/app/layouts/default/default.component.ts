@@ -32,6 +32,5 @@ export class DefaultComponent {
     else{
       classes.remove(darkModeClass)
     }
-
   }
 }
